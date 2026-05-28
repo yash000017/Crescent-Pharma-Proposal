@@ -39,7 +39,7 @@ h1,h2,h3,h4,h5 { font-family:'Space Grotesk',sans-serif; }
 .nav-dot.dot-active { border-color:var(--accent); background:var(--accent); transform:scale(1.4); box-shadow:0 0 10px rgba(0,229,160,0.5); }
 @media(max-width:768px) { #dot-nav { gap:8px; right:10px; } .nav-dot { width:8px; height:8px; } }
 
-.slide { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.6s cubic-bezier(.4,0,.2,1), transform 0.6s cubic-bezier(.4,0,.2,1); transform:translateY(30px) scale(0.97); padding:36px 48px; overflow-y:auto; }
+.slide { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.6s cubic-bezier(.4,0,.2,1), transform 0.6s cubic-bezier(.4,0,.2,1); transform:translateY(30px) scale(0.97); padding:36px 48px; overflow-y:auto; overflow-x:hidden; }
 .slide.active { opacity:1; pointer-events:all; transform:translateY(0) scale(1); }
 .slide-inner { max-width:1200px; width:100%; }
 
@@ -279,62 +279,8 @@ h1,h2,h3,h4,h5 { font-family:'Space Grotesk',sans-serif; }
   </div>
 </div>
 
-<!-- SLIDE 7: TIMELINE -->
+<!-- SLIDE 7: SECURITY -->
 <div class="slide" data-slide="7">
-  <div class="slide-inner">
-    <div class="anim section-tag">Timeline</div>
-    <h2 class="anim anim-d1 slide-title">Project Timeline <span class="brand">6&ndash;8 Weeks</span></h2>
-    <div class="anim anim-d2 grid-2" style="margin-top:22px;">
-      <div>
-        <h4 style="font-size:12px;color:var(--accent);margin-bottom:14px;letter-spacing:1px;text-transform:uppercase;">Phase 1 &mdash; Core Functionality (Wk 1&ndash;4)</h4>
-        <div class="card" style="margin-bottom:8px;padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 1&ndash;2: Setup &amp; Email Capture</span><span class="badge badge-green">Foundation</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Project setup &amp; infrastructure &bull; RBAC Authentication &bull; Shared mailbox integration &bull; AWS S3 storage</p></div>
-        <div class="card" style="margin-bottom:8px;padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 1&ndash;2: User Management</span><span class="badge badge-blue">Auth</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Finance User / Manager / Admin roles &bull; Login, session, password reset &bull; Permissions</p></div>
-        <div class="card" style="margin-bottom:8px;padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 3&ndash;4: Sage X3 Integration</span><span class="badge badge-orange">ERP</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Open-item fetching &bull; Invoice status &amp; customer fetch &bull; Allocation posting &bull; ERP sync monitoring</p></div>
-        <div class="card" style="padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 3&ndash;4: Invoice Matching Engine</span><span class="badge badge-yellow">AI</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">OCR + GPT-5 extraction &bull; Auto-match &amp; duplicate detection &bull; Partial ref &amp; prefix/suffix trim</p></div>
-      </div>
-      <div>
-        <h4 style="font-size:12px;color:var(--accent2);margin-bottom:14px;letter-spacing:1px;text-transform:uppercase;">Phase 2 &mdash; Refinement (Wk 5&ndash;8)</h4>
-        <div class="card" style="margin-bottom:8px;padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 5&ndash;6: UI &amp; UX Enhancement</span><span class="badge badge-green">Polish</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Reconciliation workspace &bull; Document viewer (PDF) &bull; Side-by-side validation &bull; Responsive UI</p></div>
-        <div class="card" style="margin-bottom:8px;padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 5&ndash;6: Validation &amp; Approval</span><span class="badge badge-blue">Workflow</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Multi-level approval dashboard &bull; Bulk approve / reject &bull; On-account balance management</p></div>
-        <div class="card" style="margin-bottom:8px;padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 7&ndash;8: Reporting &amp; Analytics</span><span class="badge badge-orange">Insights</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Processing volume reports &bull; OCR &amp; match accuracy trends &bull; Month-end reports &bull; Export</p></div>
-        <div class="card" style="padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 7&ndash;8: Testing &amp; Go-Live</span><span class="badge badge-red">Launch</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Full UAT &bull; Bug fixes &amp; edge cases &bull; Audit logging &amp; compliance &bull; Production deployment</p></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 8: COMMERCIAL PROPOSAL -->
-<div class="slide" data-slide="8">
-  <div class="slide-inner" style="text-align:center;">
-    <div class="anim section-tag">Investment</div>
-    <h2 class="anim anim-d1 slide-title">Commercial <span class="brand2">Proposal</span></h2>
-    <div class="anim anim-d2" style="margin:24px 0;">
-      <div style="font-size:12px;color:var(--muted);margin-bottom:3px;">Total Project Investment</div>
-      <div style="font-family:'Space Grotesk';font-size:clamp(36px,5.5vw,60px);font-weight:700;color:var(--accent);">&#8377; 2,80,000</div>
-    </div>
-    <div class="anim anim-d3 grid-3" style="margin-bottom:24px;">
-      <div class="card" style="text-align:center;"><div style="font-family:'Space Grotesk';font-size:30px;font-weight:700;color:var(--accent);">20%</div><div style="font-size:18px;font-weight:600;margin:3px 0;">&#8377; 56,000</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">On Signing</div><div style="font-size:11px;color:var(--muted);">Advance Payment<br>Due on project kick-off</div></div>
-      <div class="card" style="text-align:center;"><div style="font-family:'Space Grotesk';font-size:30px;font-weight:700;color:var(--accent2);">40%</div><div style="font-size:18px;font-weight:600;margin:3px 0;">&#8377; 1,12,000</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Week 3&ndash;4</div><div style="font-size:11px;color:var(--muted);">Phase 1 Completion<br>Sage Integration &bull; Matching</div></div>
-      <div class="card" style="text-align:center;"><div style="font-family:'Space Grotesk';font-size:30px;font-weight:700;color:var(--accent3);">40%</div><div style="font-size:18px;font-weight:600;margin:3px 0;">&#8377; 1,12,000</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Week 7&ndash;8</div><div style="font-size:11px;color:var(--muted);">Final Handover<br>Refinement &bull; Deployment</div></div>
-    </div>
-    <div class="anim anim-d4 card" style="text-align:left;max-width:660px;margin:0 auto;">
-      <h4 style="font-size:12px;margin-bottom:8px;color:var(--accent);"><i class="fas fa-server" style="margin-right:6px;"></i>Estimated Monthly Infrastructure</h4>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:11px;color:var(--muted);">
-        <div>AWS EC2 (t3.medium): ~$30/mo</div>
-        <div>AWS S3 Storage: ~$2-5/mo</div>
-        <div>Azure OCR (~1K pages): ~$10/mo</div>
-        <div>Azure OpenAI GPT-5: ~$15/mo</div>
-        <div>MongoDB Atlas (M2): ~$9/mo</div>
-        <div>AWS WAF: ~$12/mo</div>
-        <div><strong style="color:var(--text);">Total: ~$80/mo</strong></div>
-      </div>
-      <div style="font-size:9px;color:var(--muted);margin-top:6px;font-style:italic;">*Based on ~1,000 pages/month OCR volume. Scales with usage.</div>
-    </div>
-  </div>
-</div>
-
-<!-- SLIDE 9: SECURITY (NEW) -->
-<div class="slide" data-slide="9">
   <div class="slide-inner">
     <div class="anim section-tag">Security</div>
     <h2 class="anim anim-d1 slide-title">Security <span class="brand">&amp; Protection</span></h2>
@@ -389,24 +335,103 @@ h1,h2,h3,h4,h5 { font-family:'Space Grotesk',sans-serif; }
   </div>
 </div>
 
+<!-- SLIDE 8: TIMELINE -->
+<div class="slide" data-slide="8">
+  <div class="slide-inner">
+    <div class="anim section-tag">Timeline</div>
+    <h2 class="anim anim-d1 slide-title">Project Timeline <span class="brand">6&ndash;8 Weeks</span></h2>
+    <div class="anim anim-d2 grid-2" style="margin-top:22px;">
+      <div>
+        <h4 style="font-size:12px;color:var(--accent);margin-bottom:14px;letter-spacing:1px;text-transform:uppercase;">Phase 1 &mdash; Core Functionality (Wk 1&ndash;4)</h4>
+        <div class="card" style="margin-bottom:8px;padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 1&ndash;2: Setup &amp; Email Capture</span><span class="badge badge-green">Foundation</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Project setup &amp; infrastructure &bull; RBAC Authentication &bull; Shared mailbox integration &bull; AWS S3 storage</p></div>
+        <div class="card" style="margin-bottom:8px;padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 1&ndash;2: User Management</span><span class="badge badge-blue">Auth</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Finance User / Manager / Admin roles &bull; Login, session, password reset &bull; Permissions</p></div>
+        <div class="card" style="margin-bottom:8px;padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 3&ndash;4: Sage X3 Integration</span><span class="badge badge-orange">ERP</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Open-item fetching &bull; Invoice status &amp; customer fetch &bull; Allocation posting &bull; ERP sync monitoring</p></div>
+        <div class="card" style="padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 3&ndash;4: Invoice Matching Engine</span><span class="badge badge-yellow">AI</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">OCR + GPT-5 extraction &bull; Auto-match &amp; duplicate detection &bull; Partial ref &amp; prefix/suffix trim</p></div>
+      </div>
+      <div>
+        <h4 style="font-size:12px;color:var(--accent2);margin-bottom:14px;letter-spacing:1px;text-transform:uppercase;">Phase 2 &mdash; Refinement (Wk 5&ndash;8)</h4>
+        <div class="card" style="margin-bottom:8px;padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 5&ndash;6: UI &amp; UX Enhancement</span><span class="badge badge-green">Polish</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Reconciliation workspace &bull; Document viewer (PDF) &bull; Side-by-side validation &bull; Responsive UI</p></div>
+        <div class="card" style="margin-bottom:8px;padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 5&ndash;6: Validation &amp; Approval</span><span class="badge badge-blue">Workflow</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Multi-level approval dashboard &bull; Bulk approve / reject &bull; On-account balance management</p></div>
+        <div class="card" style="margin-bottom:8px;padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 7&ndash;8: Reporting &amp; Analytics</span><span class="badge badge-orange">Insights</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Processing volume reports &bull; OCR &amp; match accuracy trends &bull; Month-end reports &bull; Export</p></div>
+        <div class="card" style="padding:12px 16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><span style="font-size:11px;font-weight:600;">Week 7&ndash;8: Testing &amp; Go-Live</span><span class="badge badge-red">Launch</span></div><p style="font-size:10px;color:var(--muted);line-height:1.55;">Full UAT &bull; Bug fixes &amp; edge cases &bull; Audit logging &amp; compliance &bull; Production deployment</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: COMMERCIAL PROPOSAL -->
+<div class="slide" data-slide="9">
+  <div class="slide-inner" style="text-align:center;">
+    <div class="anim section-tag">Investment</div>
+    <h2 class="anim anim-d1 slide-title">Commercial <span class="brand2">Proposal</span></h2>
+    <div class="anim anim-d2" style="margin:24px 0;">
+      <div style="font-size:12px;color:var(--muted);margin-bottom:3px;">Total Project Investment</div>
+      <div style="font-family:'Space Grotesk';font-size:clamp(36px,5.5vw,60px);font-weight:700;color:var(--accent);">&#8377; 2,80,000</div>
+    </div>
+    <div class="anim anim-d3 grid-3" style="margin-bottom:24px;">
+      <div class="card" style="text-align:center;"><div style="font-family:'Space Grotesk';font-size:30px;font-weight:700;color:var(--accent);">20%</div><div style="font-size:18px;font-weight:600;margin:3px 0;">&#8377; 56,000</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">On Signing</div><div style="font-size:11px;color:var(--muted);">Advance Payment<br>Due on project kick-off</div></div>
+      <div class="card" style="text-align:center;"><div style="font-family:'Space Grotesk';font-size:30px;font-weight:700;color:var(--accent2);">40%</div><div style="font-size:18px;font-weight:600;margin:3px 0;">&#8377; 1,12,000</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Week 3&ndash;4</div><div style="font-size:11px;color:var(--muted);">Phase 1 Completion<br>Sage Integration &bull; Matching</div></div>
+      <div class="card" style="text-align:center;"><div style="font-family:'Space Grotesk';font-size:30px;font-weight:700;color:var(--accent3);">40%</div><div style="font-size:18px;font-weight:600;margin:3px 0;">&#8377; 1,12,000</div><div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Week 7&ndash;8</div><div style="font-size:11px;color:var(--muted);">Final Handover<br>Refinement &bull; Deployment</div></div>
+    </div>
+    <div class="anim anim-d4 card" style="text-align:left;max-width:660px;margin:0 auto;">
+      <h4 style="font-size:12px;margin-bottom:8px;color:var(--accent);"><i class="fas fa-server" style="margin-right:6px;"></i>Estimated Monthly Infrastructure</h4>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:11px;color:var(--muted);">
+        <div>AWS EC2 (t3.medium): ~$30/mo</div>
+        <div>AWS S3 Storage: ~$2-5/mo</div>
+        <div>Azure OCR (~1K pages): ~$10/mo</div>
+        <div>Azure OpenAI GPT-5: ~$15/mo</div>
+        <div>MongoDB Atlas (M2): ~$9/mo</div>
+        <div>AWS WAF: ~$12/mo</div>
+        <div><strong style="color:var(--text);">Total: ~$80/mo</strong></div>
+      </div>
+      <div style="font-size:9px;color:var(--muted);margin-top:6px;font-style:italic;">*Based on ~1,000 pages/month OCR volume. Scales with usage.</div>
+    </div>
+  </div>
+</div>
+
 <!-- SLIDE 10: SUPPORT -->
 <div class="slide" data-slide="10">
-  <div class="slide-inner" style="display:flex;align-items:center;justify-content:center;">
-    <div style="text-align:center;max-width:500px;">
-      <div class="anim section-tag">Support</div>
-      <h2 class="anim anim-d1 slide-title">60-Day Post-Delivery <span class="brand">Support</span></h2>
-      <div class="anim anim-d2 card" style="margin-top:32px;">
-        <div style="text-align:center;margin-bottom:24px;">
-          <div style="font-family:'Space Grotesk';font-size:56px;font-weight:700;color:var(--accent);">60</div>
-          <div style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;">Days Maintenance</div>
+  <div class="slide-inner" style="text-align:center;">
+    <div class="anim section-tag">Support</div>
+    <h2 class="anim anim-d1 slide-title">Post-Delivery Support <span class="brand">&amp; Maintenance</span></h2>
+    
+    <div class="anim anim-d2 grid-2" style="margin-top:32px; text-align:left; max-width:860px; margin-left:auto; margin-right:auto;">
+      <!-- CARD 1: 60-DAY POST-DELIVERY MAINTENANCE -->
+      <div class="card" style="display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+        <div>
+          <div style="text-align:center;margin-bottom:20px;">
+            <div style="font-family:'Space Grotesk';font-size:48px;font-weight:700;color:var(--accent);">60</div>
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;">Days Included</div>
+          </div>
+          <h3 style="font-size:14px;margin-bottom:12px;color:var(--text);font-family:'Space Grotesk';font-weight:600;"><i class="fas fa-tools brand" style="margin-right:7px;"></i>Free Maintenance Period</h3>
+          <ul class="checklist" style="font-size:12px;">
+            <li><i class="fas fa-check check-icon"></i> Bug fixes at no additional cost</li>
+            <li><i class="fas fa-check check-icon"></i> Minor UI adjustments &amp; label changes</li>
+            <li><i class="fas fa-check check-icon"></i> Small configuration &amp; workflow tweaks</li>
+          </ul>
         </div>
-        <ul class="checklist" style="font-size:12px;text-align:left;">
-          <li><i class="fas fa-check check-icon"></i> Bug fixes at no additional cost</li>
-          <li><i class="fas fa-check check-icon"></i> Minor UI adjustments &amp; label changes</li>
-          <li><i class="fas fa-check check-icon"></i> Small configuration &amp; workflow tweaks</li>
-          <li><i class="fas fa-times cross-icon"></i> New features or major additions (quoted separately)</li>
-        </ul>
-        <div style="font-size:10px;color:var(--muted);margin-top:12px;font-style:italic;">Maintenance period begins from date of final production handover.</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:20px;font-style:italic;border-top:1px solid rgba(0,229,160,0.06);padding-top:10px;">
+          Maintenance period begins from the date of final production handover.
+        </div>
+      </div>
+
+      <!-- CARD 2: SUBSEQUENT SUPPORT & DEVELOPMENT -->
+      <div class="card" style="display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+        <div>
+          <div style="text-align:center;margin-bottom:20px;">
+            <div style="font-family:'Space Grotesk';font-size:48px;font-weight:700;color:var(--accent3);">&#8377; 2,200</div>
+            <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:2px;">Per Hour</div>
+          </div>
+          <h3 style="font-size:14px;margin-bottom:12px;color:var(--text);font-family:'Space Grotesk';font-weight:600;"><i class="fas fa-clock check-icon" style="color:var(--accent3);margin-right:7px;"></i>Subsequent Support</h3>
+          <ul class="checklist" style="font-size:12px;">
+            <li><i class="fas fa-check check-icon" style="color:var(--accent3);"></i> Dedicated developer resource allocation</li>
+            <li><i class="fas fa-check check-icon" style="color:var(--accent3);"></i> New features &amp; major workflow additions</li>
+            <li><i class="fas fa-check check-icon" style="color:var(--accent3);"></i> Out-of-scope integration enhancements</li>
+          </ul>
+        </div>
+        <div style="font-size:10px;color:var(--muted);margin-top:20px;font-style:italic;border-top:1px solid rgba(0,229,160,0.06);padding-top:10px;">
+          Support or development work will be charged at this rate after the 60-day maintenance window.
+        </div>
       </div>
     </div>
   </div>
